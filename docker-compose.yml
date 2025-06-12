@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  bokeh-app:
+    container_name: bokeh-visualizer
+    build: .
+    ports:
+      - "5006:5006"
+    command: >
+      bokeh serve first_screen_fileinput.py
+      --allow-websocket-origin=*
+      --port=5006
+      --websocket-max-message-size=1073741824

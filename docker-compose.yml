@@ -5,9 +5,9 @@ services:
     container_name: bokeh-visualizer
     build: .
     ports:
-      - "5006:5006"
+      - "5007:5007"
     command: >
-      bokeh serve first_screen_fileinput.py
+      bokeh serve second_screen_fileinput.py
       --allow-websocket-origin=*
       --port=5006
       --websocket-max-message-size=1073741824
